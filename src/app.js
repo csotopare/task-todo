@@ -1,7 +1,6 @@
-import "./css/styles.css";
+import './css/styles.css';
+import { Todo, TodoList, crearTodoHtml, countHtml } from './js';
 
-if (process.env.NODE_ENV === "development") {
-	require("./index.html");
-}
+export const todoList = new TodoList();
 
-console.log("webpack starterkit");
+todoList.todos.forEach(crearTodoHtml); // (todo) => crearTodoHtml(todo) - Cuando tenemos dos argumentos iguales también podemos usar solo (creandoTodoHtml)
