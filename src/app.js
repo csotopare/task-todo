@@ -1,5 +1,14 @@
 import './css/styles.css';
-import { Todo, TodoList, crearTodoHtml, countHtml } from './js';
+if (process.env.NODE_ENV === "development") {
+   require("./index.html");
+}
+
+import {
+   Todo,
+   TodoList,
+   crearTodoHtml,
+   countHtml
+} from './js';
 
 export const todoList = new TodoList();
 
